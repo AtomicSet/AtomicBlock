@@ -1,0 +1,27 @@
+version: '2'
+
+
+tasks:
+  default:
+    deps:
+      - build
+
+  build:
+    cmds:
+      - python setup.py build_ext -i
+
+  clean:
+    cmds:
+      - python setup.py clean
+
+  clear:
+    cmds:
+      - find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf 
+  
+  develop:
+    cmds:
+      - pip install --no-deps -e .
+
+  test:
+    cmds:
+      - pytest
