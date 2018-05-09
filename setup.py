@@ -13,4 +13,7 @@ setup(
         "atomicblock.io.read",
     ],
     ext_modules=cythonize("**/*.pyx"),
+    install_requires=[
+        "ProDy",
+    ],
 )
