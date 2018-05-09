@@ -1,6 +1,7 @@
 from . import path
 import os
 
+
 def test():
     answer = path(os.path.join("pdb", "3j5p.pdb"))
     here = os.path.dirname(os.path.realpath(__file__))
